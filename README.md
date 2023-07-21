@@ -1,6 +1,6 @@
-## Dilated_Attention - Pytorch (WIP)
+## Dilated_Attention (WIP)
 
-This an unofficial implementation (WIP) of the dilated attention mechanism described in the <a href="https://arxiv.org/abs/2307.02486">LongNet</a> paper.
+This an unofficial implementation (WIP) of the dilated attention mechanism described in the <a href="https://arxiv.org/abs/2307.02486">LongNet</a> paper in PyTorch.
 It rely on <a href="https://github.com/Dao-AILab/flash-attention">FlashAttention 2</a> for the dense attention implementation.
 
 ## Install
