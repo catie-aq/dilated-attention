@@ -6,7 +6,7 @@ It rely on <a href="https://github.com/Dao-AILab/flash-attention">FlashAttention
 ## Install
 
 ```bash
-$ pip install dilated-attention
+$ pip install git+https://github.com/catie-aq/dilated-attention.git
 ```
 
 ## Usage
