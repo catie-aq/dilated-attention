@@ -1,12 +1,16 @@
 import torch
 
-w = 32
-r = 10
+# set up some parameters
+w = 32 # segment length
+r = 10 # dilation
 
+
+# Create a tensor of indices used to debug
 batch_size = 5
 seqlen = 320
 num_heads = 12
 head_size = 16
+
 x = torch.empty(batch_size, seqlen, num_heads, head_size)
 for i in range(batch_size):
   for j in range(seqlen):
@@ -32,8 +36,7 @@ grouped_tensor = final_tensor.reshape((batch_size, num_segments, r, num_heads, h
 print(grouped_tensor[0, 1, :, 0, 0])
 
 value_scatter_tensor = grouped_tensor.reshape((batch_size, num_segments * r, num_heads, head_size))
-print(value_scatter_tensor)
+
 scatter_tensor = torch.zeros((batch_size, seqlen, num_heads, head_size), dtype=grouped_tensor.dtype)
 scatter_tensor.scatter(1, final_indices, value_scatter_tensor).reshape((batch_size, seqlen, -1))
-print(scatter_tensor)
 print(scatter_tensor.shape)

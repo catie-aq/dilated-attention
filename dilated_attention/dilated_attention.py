@@ -36,6 +36,7 @@ class DilatedAttention(nn.Module):
     def forward(self, X, causal=False, normalize_with_softmax=False):
         """
             X: (batch_size, seqlen, hidden_size)
+            causal : bool - ausal mask passed to the
         """
         X = X.contiguous()
 

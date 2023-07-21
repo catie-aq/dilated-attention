@@ -4,12 +4,15 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="longnet",
+    name="dilated-attention",
     version="0.1",
     description="",
+    license='MIT',
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="",
+    author = 'Boris Albar',
+    author_email = 'b.albar@catie.fr',
+    url="https://github.com/catie-aq/dilated-attention/",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
